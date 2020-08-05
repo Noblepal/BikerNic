@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Smart Yang</string>
     <string name="please_enter_validation_code">Please enter validation code</string>
+    <string name="select_new_vehicle">Select New Vehicle</string>
 </resources>
