@@ -31,7 +31,7 @@ public class VerificationActivity extends AppCompatActivity {
             //TODO: return
         }
 
-        b.btnValidateCode.setOnClickListener(v->{
+        b.btnValidateCode.setOnClickListener(v -> {
             validateCode();
         });
     }
@@ -45,11 +45,15 @@ public class VerificationActivity extends AppCompatActivity {
         }
 
         /*
-        * TODO: validate code
-        * The validation code must be checked with an algorithm with a key
-        * in the application in order to verify the validation code.
-        * This algorithm will be used also to generate the validation codes.
-        * */
+         * TODO: validate code
+         * The validation code must be checked with an algorithm with a key
+         * in the application in order to verify the validation code.
+         * This algorithm will be used also to generate the validation codes.
+         * */
+
+        /*On code validated*/
+        startActivity(new Intent(this, VehicleSelectActivity.class));
+        finish();
 
     }
 }

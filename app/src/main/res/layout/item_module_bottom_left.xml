@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/tvNumIndicator3"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_gravity="start"
+        android:layout_marginBottom="-10dp"
+        android:background="@drawable/ic_indicator_bottom_left_bg"
+        android:backgroundTint="@color/colorAccentDeep"
+        android:elevation="-1dp"
+        android:gravity="start"
+        android:paddingStart="8dp"
+        android:paddingBottom="8dp"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_bl_module"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/tb_connection3"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/ic_connection"
+                android:textOff="@null"
+                android:textOn="@null" />
+
+            <ToggleButton
+                android:id="@+id/tb_decompression3"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/ic_decompression"
+                android:textOff="@null"
+                android:textOn="@null" />
+
+            <ToggleButton
+                android:id="@+id/tb_pressure3"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/ic_error"
+                android:textOff="@null"
+                android:textOn="@null" />
+
+            <ToggleButton
+                android:id="@+id/tb_temperature3"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/ic_temperature"
+                android:textOff="@null"
+                android:textOn="@null" />
+
+            <ToggleButton
+                android:id="@+id/tb_battery3"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/ic_battery"
+                android:textOff="@null"
+                android:textOn="@null" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="4dp"
+            android:text="kPa"
+            android:textColor="@color/grey_400"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:text="350.0"
+            android:textColor="@color/colorAccentDeep"
+            android:textSize="28dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="4dp"
+            android:text="24 \u2103"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

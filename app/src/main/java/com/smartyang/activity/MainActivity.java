@@ -1,18 +1,24 @@
 package com.smartyang.activity;
 
+import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.Observer;
 
 import com.smartyang.R;
 import com.smartyang.databinding.ActivityMainBinding;
+import com.smartyang.room.AppDatabase;
+import com.smartyang.room.model.Vehicle;
 
+import java.util.List;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,12 +27,18 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_ENABLE_BT = 0;
     private static final int REQUEST_DISCOVER_BT = 1;
 
+    private AppDatabase appDatabase;
+
     private BluetoothAdapter bluetoothAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         b = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
+        appDatabase = AppDatabase.getInstance(this);
+
+        loadVehicles();
 
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -84,6 +96,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    private void loadVehicles() {
+        /*new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                appDatabase.vehicleDao().getVehicles().observe(MainActivity.this, vehicles -> {
+
+                });
+                return null;
+            }
+        }.execute();*/
     }
 
 
